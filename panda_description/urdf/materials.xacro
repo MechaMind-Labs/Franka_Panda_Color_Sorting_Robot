@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<robot name="panda" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- Rviz Materials -->
+
+    <!--  White -->
+    <material name="white">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+    </material>
+
+    <!-- Mud Yellow -->
+    <material name="mud_yellow">
+        <color rgba="0.804 0.522 0.247 1.000"/>
+    </material>
+
+    <!-- Purple -->
+    <material name="purple">
+        <color rgba="0.502 0.000 0.502 1.000"/>
+    </material>
+
+    <!-- Matte Brown -->
+    <material name="matte_brown">
+        <color rgba="0.545 0.271 0.075 1.000"/> <!-- RGB for a rich matte brown -->
+    </material>
+
+    <!-- Cream -->
+    <material name="cream">
+        <color rgba="1.000 0.980 0.850 1.000"/>
+    </material>
+
+    <xacro:macro name="box_inertia" params="m l w h xyz rpy">
+        <inertial>
+            <origin xyz="${xyz}" rpy="${rpy}" />
+            <mass value="${m}" />
+            <inertia ixx="${(m/12) * (h*h + l*l)}" ixy="0" ixz="0"
+                     iyy="${(m/12) * (w*w + l*l)}" iyz="0"
+                     izz="${(m/12) * (w*w + h*h)}" />
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="cylinder_inertia" params="m r h xyz rpy">
+        <inertial>
+            <origin xyz="${xyz}" rpy="${rpy}" />
+            <mass value="${m}" />
+            <inertia ixx="${(m/12) * (3*r*r + h*h)}" ixy="0" ixz="0"
+                     iyy="${(m/12) * (3*r*r + h*h)}" iyz="0"
+                     izz="${(m/2) * (r*r)}" />
+        </inertial>
+    </xacro:macro>
+
+</robot>
