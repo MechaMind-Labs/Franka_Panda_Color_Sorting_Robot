@@ -38,7 +38,6 @@ def generate_launch_description():
         executable="robot_state_publisher",
         parameters=[{"robot_description": robot_description,
                      "use_sim_time": is_sim}],
-        # condition=UnlessCondition(is_sim),
     )
 
     controller_manager = Node(
@@ -53,7 +52,6 @@ def generate_launch_description():
                 "panda_controllers.yaml",
             ),
         ],
-        # condition=UnlessCondition(is_sim),
     )
 
     joint_state_broadcaster_spawner = Node(
