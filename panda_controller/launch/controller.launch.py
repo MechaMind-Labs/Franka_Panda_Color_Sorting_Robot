@@ -26,7 +26,8 @@ def generate_launch_description():
                     "urdf",
                     "panda.urdf.xacro",
                 ),
-                " is_sim:=True"
+                " is_sim:=True",
+                " is_ignition:=True" # remember to make it according to the Gazebo version
             ]
         ),
         value_type=str,
@@ -36,8 +37,8 @@ def generate_launch_description():
         package="robot_state_publisher",
         executable="robot_state_publisher",
         parameters=[{"robot_description": robot_description,
-                     "use_sim_time": False}],
-        condition=UnlessCondition(is_sim),
+                     "use_sim_time": is_sim}],
+        # condition=UnlessCondition(is_sim),
     )
 
     controller_manager = Node(
@@ -52,7 +53,7 @@ def generate_launch_description():
                 "panda_controllers.yaml",
             ),
         ],
-        condition=UnlessCondition(is_sim),
+        # condition=UnlessCondition(is_sim),
     )
 
     joint_state_broadcaster_spawner = Node(
