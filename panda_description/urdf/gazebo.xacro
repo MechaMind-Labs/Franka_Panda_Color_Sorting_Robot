@@ -25,28 +25,4 @@
     </xacro:unless>
   </gazebo>
 
-    <gazebo reference="camera_link">
-        <sensor name="camera" type="camera">
-            <pose>0 0 0 0 1.57 0</pose>
-            <visualize>true</visualize>
-            <update_rate>10.0</update_rate>
-            <alwaysOn>true</alwaysOn>
-            <topic>camera/image_raw</topic>
-            <gz_frame_id>camera_link_optical</gz_frame_id>
-            <camera name="intel_realsense_r200">
-                <camera_info_topic>camera/camera_info</camera_info_topic>
-                <horizontal_fov>1.3962634</horizontal_fov>
-                <image>
-                    <width>640</width>
-                    <height>480</height>
-                    <format>R8G8B8</format>
-                </image>
-                <clip>
-                    <near>0.05</near>
-                    <far>8.0</far>
-                </clip>
-            </camera>
-        </sensor>
-  </gazebo>
-
 </robot>

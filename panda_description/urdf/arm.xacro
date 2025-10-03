@@ -1,54 +1,56 @@
 <?xml version="1.0" ?>
 <robot name="panda" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <material name="cream">
-    <color rgba="1.000 0.980 0.850 1.000"/>
+  <material name="red">
+    <color rgba="1.0 0.0 0.0 1.000"/>
   </material>
+
+  <!-- World Frame -->
+  <link name="world"/>
   
   <!-- Link 0 - Base -->
   <link name="panda_link0">
     <visual>
       <geometry>
-        <mesh filename="package://panda_description/meshes/collision/link0.obj"/>
+        <mesh filename="package://panda_description/meshes/visual/link0.dae"/>
       </geometry>
-      <material name="cream"/>
     </visual>
     <collision>
       <geometry>
         <mesh filename="package://panda_description/meshes/collision/link0.obj"/>
       </geometry>
-      <material name="cream"/>
     </collision>
-    <inertial>
-      <origin xyz="0.0 0.0 0.05" rpy="0 0 0"/>
-      <mass value="2.95"/>
-      <inertia ixx="0.00315" ixy="0.0" ixz="0.0" 
-               iyy="0.00315" iyz="0.0" 
-               izz="0.004875"/>
-    </inertial>
+      <inertial>
+          <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+          <mass value="0.1"/>
+          <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+      </inertial>
   </link>
+
+  <!-- World-Base Joint -->
+  <joint name="virtual_joint" type="fixed">
+    <parent link="world"/>
+    <child link="panda_link0"/>
+    <origin xyz="0.6 0 0.35" rpy="0 0 1.57"/>
+  </joint>
 
   <!-- Link 1 -->
   <link name="panda_link1">
     <visual>
       <geometry>
-        <mesh filename="package://panda_description/meshes/collision/link1.obj"/>
+        <mesh filename="package://panda_description/meshes/visual/link1.dae"/>
       </geometry>
-      <material name="cream"/>
     </visual>
     <collision>
       <geometry>
         <mesh filename="package://panda_description/meshes/collision/link1.obj"/>
       </geometry>
-      <material name="cream"/>
     </collision>
-    <inertial>
-      <origin xyz="0.0 -0.032 -0.067" rpy="0 0 0"/>
-      <mass value="2.74"/>
-      <inertia ixx="0.0180" ixy="0.0" ixz="0.0" 
-               iyy="0.0193" iyz="0.0014" 
-               izz="0.0068"/>
-    </inertial>
+        <inertial>
+            <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+            <mass value="0.1"/>
+            <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+        </inertial>
   </link>
 
   <!-- Joint 1 -->
@@ -65,23 +67,19 @@
   <link name="panda_link2">
     <visual>
       <geometry>
-        <mesh filename="package://panda_description/meshes/collision/link2.obj"/>
+        <mesh filename="package://panda_description/meshes/visual/link2.dae"/>
       </geometry>
-      <material name="cream"/>
     </visual>
     <collision>
       <geometry>
         <mesh filename="package://panda_description/meshes/collision/link2.obj"/>
       </geometry>
-      <material name="cream"/>
     </collision>
-    <inertial>
-      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-      <mass value="2.74"/>
-      <inertia ixx="0.0180" ixy="0.0" ixz="0.0" 
-               iyy="0.0068" iyz="0.0" 
-               izz="0.0193"/>
-    </inertial>
+        <inertial>
+          <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+          <mass value="0.1"/>
+          <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+      </inertial>
   </link>
 
   <!-- Joint 2 -->
@@ -98,23 +96,19 @@
   <link name="panda_link3">
     <visual>
       <geometry>
-        <mesh filename="package://panda_description/meshes/collision/link3.obj"/>
+        <mesh filename="package://panda_description/meshes/visual/link3.dae"/>
       </geometry>
-      <material name="cream"/>
     </visual>
     <collision>
       <geometry>
         <mesh filename="package://panda_description/meshes/collision/link3.obj"/>
       </geometry>
-      <material name="cream"/>
     </collision>
-    <inertial>
-      <origin xyz="0.0434 0.0 -0.121" rpy="0 0 0"/>
-      <mass value="2.38"/>
-      <inertia ixx="0.0125" ixy="0.0" ixz="-0.0036" 
-               iyy="0.0165" iyz="0.0" 
-               izz="0.0060"/>
-    </inertial>
+      <inertial>
+          <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+          <mass value="0.1"/>
+          <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+      </inertial>
   </link>
 
   <!-- Joint 3 -->
@@ -131,23 +125,19 @@
   <link name="panda_link4">
     <visual>
       <geometry>
-        <mesh filename="package://panda_description/meshes/collision/link4.obj"/>
+        <mesh filename="package://panda_description/meshes/visual/link4.dae"/>
       </geometry>
-      <material name="cream"/>
     </visual>
     <collision>
       <geometry>
         <mesh filename="package://panda_description/meshes/collision/link4.obj"/>
       </geometry>
-      <material name="cream"/>
     </collision>
-    <inertial>
-      <origin xyz="0.0 0.0610 -0.104" rpy="0 0 0"/>
-      <mass value="2.74"/>
-      <inertia ixx="0.0358" ixy="0.0" ixz="0.0" 
-               iyy="0.0095" iyz="0.0119" 
-               izz="0.0304"/>
-    </inertial>
+      <inertial>
+          <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+          <mass value="0.1"/>
+          <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+      </inertial>
   </link>
 
   <!-- Joint 4 -->
@@ -164,23 +154,19 @@
   <link name="panda_link5">
     <visual>
       <geometry>
-        <mesh filename="package://panda_description/meshes/collision/link5.obj"/>
+        <mesh filename="package://panda_description/meshes/visual/link5.dae"/>
       </geometry>
-      <material name="cream"/>
     </visual>
     <collision>
       <geometry>
         <mesh filename="package://panda_description/meshes/collision/link5.obj"/>
       </geometry>
-      <material name="cream"/>
     </collision>
-    <inertial>
-      <origin xyz="0.0 0.0610 -0.104" rpy="0 0 0"/>
-      <mass value="2.74"/>
-      <inertia ixx="0.0358" ixy="0.0" ixz="0.0" 
-               iyy="0.0095" iyz="0.0119" 
-               izz="0.0304"/>
-    </inertial>
+      <inertial>
+          <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+          <mass value="0.1"/>
+          <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+      </inertial>
   </link>
 
   <!-- Joint 5 -->
@@ -197,23 +183,19 @@
   <link name="panda_link6">
     <visual>
       <geometry>
-        <mesh filename="package://panda_description/meshes/collision/link6.obj"/>
+        <mesh filename="package://panda_description/meshes/visual/link6.dae"/>
       </geometry>
-      <material name="cream"/>
     </visual>
     <collision>
       <geometry>
         <mesh filename="package://panda_description/meshes/collision/link6.obj"/>
       </geometry>
-      <material name="cream"/>
     </collision>
-    <inertial>
-      <origin xyz="0.051 0.009 -0.015" rpy="0 0 0"/>
-      <mass value="1.55"/>
-      <inertia ixx="0.0047" ixy="0.0" ixz="0.0015" 
-               iyy="0.0047" iyz="0.0" 
-               izz="0.0031"/>
-    </inertial>
+      <inertial>
+          <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+          <mass value="0.1"/>
+          <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+      </inertial>
   </link>
 
   <!-- Joint 6 -->
@@ -230,23 +212,19 @@
   <link name="panda_link7">
     <visual>
       <geometry>
-        <mesh filename="package://panda_description/meshes/collision/link7.obj"/>
+        <mesh filename="package://panda_description/meshes/visual/link7.dae"/>
       </geometry>
-      <material name="cream"/>
     </visual>
     <collision>
       <geometry>
         <mesh filename="package://panda_description/meshes/collision/link7.obj"/>
       </geometry>
-      <material name="cream"/>
     </collision>
-    <inertial>
-      <origin xyz="0.0 0.0 0.02" rpy="0 0 0"/>
-      <mass value="0.54"/>
-      <inertia ixx="0.0012" ixy="0.0" ixz="0.0" 
-               iyy="0.0012" iyz="0.0" 
-               izz="0.0016"/>
-    </inertial>
+      <inertial>
+          <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+          <mass value="0.1"/>
+          <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+      </inertial>
   </link>
 
   <!-- Joint 7 -->
@@ -259,76 +237,49 @@
     <limit effort="30.0" lower="-2.9671" upper="2.9671" velocity="10.0"/>
   </joint>
 
-  <!-- Link 8 - No visual/collision, but needs inertial for Gazebo -->
-  <link name="panda_link8">
-    <inertial>
-      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" 
-               iyy="0.0001" iyz="0.0" 
-               izz="0.0001"/>
-    </inertial>
-  </link>
-
-  <!-- Joint 8 -->
-  <joint name="panda_joint8" type="fixed">
-    <origin rpy="0 0 0" xyz="0 0 0.107"/>
-    <parent link="panda_link7"/>
-    <child link="panda_link8"/>
-    <axis xyz="0 0 0"/>
-  </joint>
-
-  <!-- Hand Joint -->
-  <joint name="panda_hand_joint" type="fixed">
-    <parent link="panda_link8"/>
-    <child link="panda_hand"/>
-    <origin rpy="0 0 -0.785398163397" xyz="0 0 0"/>
-  </joint>
-
   <!-- Hand Link -->
   <link name="panda_hand">
     <visual>
       <geometry>
-        <mesh filename="package://panda_description/meshes/collision/hand.obj"/>
+        <mesh filename="package://panda_description/meshes/visual/hand.dae"/>
       </geometry>
-      <material name="cream"/>
     </visual>
     <collision>
       <geometry>
         <mesh filename="package://panda_description/meshes/collision/hand.obj"/>
       </geometry>
-      <material name="cream"/>
     </collision>
-    <inertial>
-      <origin xyz="0.0 0.0 0.05" rpy="0 0 0"/>
-      <mass value="0.76"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" 
-               iyy="0.0025" iyz="0.0" 
-               izz="0.0017"/>
-    </inertial>
+      <inertial>
+          <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+          <mass value="0.1"/>
+          <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+      </inertial>
   </link>
+
+  <!-- Hand Joint -->
+  <joint name="panda_hand_joint" type="fixed">
+    <parent link="panda_link7"/>
+    <child link="panda_hand"/>
+    <origin rpy="0 0 -0.785398163397" xyz="0 0 0.106"/>
+  </joint>
 
   <!-- Left Finger Link -->
   <link name="panda_leftfinger">
     <visual>
       <geometry>
-        <mesh filename="package://panda_description/meshes/collision/finger.obj"/>
+        <mesh filename="package://panda_description/meshes/visual/finger.dae"/>
       </geometry>
-      <material name="cream"/>
     </visual>
     <collision>
       <geometry>
         <mesh filename="package://panda_description/meshes/collision/finger.obj"/>
       </geometry>
-      <material name="cream"/>
     </collision>
-    <inertial>
-      <origin xyz="0.0 0.0145 0.0227" rpy="0 0 0"/>
-      <mass value="0.015"/>
-      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" 
-               iyy="0.0001" iyz="0.0" 
-               izz="0.0001"/>
-    </inertial>
+      <inertial>
+          <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+          <mass value="0.1"/>
+          <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+      </inertial>
   </link>
 
   <!-- Right Finger Link -->
@@ -336,24 +287,20 @@
     <visual>
       <origin rpy="0 0 3.14159265359" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://panda_description/meshes/collision/finger.obj"/>
+        <mesh filename="package://panda_description/meshes/visual/finger.dae"/>
       </geometry>
-      <material name="cream"/>
     </visual>
     <collision>
       <origin rpy="0 0 3.14159265359" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://panda_description/meshes/collision/finger.obj"/>
       </geometry>
-      <material name="cream"/>
     </collision>
-    <inertial>
-      <origin xyz="0.0 -0.0145 0.0227" rpy="0 0 0"/>
-      <mass value="0.015"/>
-      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" 
-               iyy="0.0001" iyz="0.0" 
-               izz="0.0001"/>
-    </inertial>
+      <inertial>
+          <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+          <mass value="0.1"/>
+          <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+      </inertial>
   </link>
 
   <!-- Finger Joint 1 -->
@@ -373,14 +320,6 @@
     <axis xyz="0 1 0"/>
     <limit effort="30.0" lower="0.0" upper="0.04" velocity="10.0"/>
     <mimic joint="panda_finger_joint1" multiplier="-1"/>
-  </joint>
-
-  <link name="world"/>
-
-  <joint name="world_to_base" type="fixed">
-    <parent link="world"/>
-    <child link="panda_link0"/>
-    <origin xyz="0.6 0 0.35" rpy="0 0 1.57"/>
   </joint>
 
 </robot>

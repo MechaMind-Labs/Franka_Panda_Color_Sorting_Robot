@@ -27,7 +27,6 @@
         <param name="max">2.9671</param>
       </command_interface>
       <state_interface name="position"/>
-      <state_interface name="velocity"/>
     </joint>
 
     <!-- Joint 2 -->
@@ -37,7 +36,6 @@
         <param name="max">1.8326</param>
       </command_interface>
       <state_interface name="position"/>
-      <state_interface name="velocity"/>
     </joint>
 
     <!-- Joint 3 -->
@@ -47,7 +45,6 @@
         <param name="max">2.9671</param>
       </command_interface>
       <state_interface name="position"/>
-      <state_interface name="velocity"/>
     </joint>
 
     <!-- Joint 4 -->
@@ -57,7 +54,6 @@
         <param name="max">0.0</param>
       </command_interface>
       <state_interface name="position"/>
-      <state_interface name="velocity"/>
     </joint>
 
     <!-- Joint 5 -->
@@ -67,7 +63,6 @@
         <param name="max">2.9671</param>
       </command_interface>
       <state_interface name="position"/>
-      <state_interface name="velocity"/>
     </joint>
 
     <!-- Joint 6 -->
@@ -77,7 +72,6 @@
         <param name="max">3.8223</param>
       </command_interface>
       <state_interface name="position"/>
-      <state_interface name="velocity"/>
     </joint>
 
     <!-- Joint 7 -->
@@ -87,7 +81,6 @@
         <param name="max">2.9671</param>
       </command_interface>
       <state_interface name="position"/>
-      <state_interface name="velocity"/>
     </joint>
 
     <!-- Gripper Finger Joint 1 -->
@@ -97,7 +90,6 @@
         <param name="max">0.04</param>
       </command_interface>
       <state_interface name="position"/>
-      <state_interface name="velocity"/>
     </joint>
 
     <!-- Gripper Finger Joint 2 (Mimics Joint 1) -->
