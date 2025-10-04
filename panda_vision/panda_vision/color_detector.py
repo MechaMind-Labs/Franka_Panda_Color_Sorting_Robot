@@ -32,7 +32,7 @@ class ColorDetector(Node):
         self.fx = 585.0
         self.fy = 588.0
         self.cx = 320.0
-        self.cy = 180.0
+        self.cy = 160.0
 
         self.get_logger().info("Color Detector Node Started with TF2 lookup transform")
 
@@ -67,7 +67,7 @@ class ColorDetector(Node):
             contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
             for cnt in contours:
-                if cv2.contourArea(cnt) > 100:  # Increased minimum area threshold
+                if cv2.contourArea(cnt) > 1:  # Increased minimum area threshold
                     x, y, w, h = cv2.boundingRect(cnt)
                     cx_pix, cy_pix = x + w // 2, y + h // 2
 
@@ -78,8 +78,8 @@ class ColorDetector(Node):
 
                     # Convert pixel -> camera frame
                     Z = 0.1  # Assumed depth/distance
-                    X = (cx_pix - self.cx) * Z / self.fx
-                    Y = (cy_pix - self.cy) * Z / self.fy
+                    Y = (cx_pix - self.cx) * Z / self.fx * -10
+                    X = (cy_pix - self.cy) * Z / self.fy
 
                     try:
                         # Lookup transform camera_link -> panda_link0

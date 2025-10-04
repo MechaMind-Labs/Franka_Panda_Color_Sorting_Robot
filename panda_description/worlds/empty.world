@@ -22,14 +22,14 @@
       <collision name="red_collision">
         <geometry>
           <box>
-            <size>0.03 0.03 0.1</size>
+            <size>0.06 0.06 0.1</size>
           </box>
         </geometry>
       </collision>
       <visual name="red_visual">
         <geometry>
           <box>
-            <size>0.03 0.03 0.1</size>
+            <size>0.06 0.06 0.1</size>
           </box>
         </geometry>
         <material>
@@ -48,14 +48,14 @@
       <collision name="green_collision">
         <geometry>
           <box>
-            <size>0.03 0.03 0.1</size>
+            <size>0.06 0.06 0.1</size>
           </box>
         </geometry>
       </collision>
       <visual name="green_visual">
         <geometry>
           <box>
-            <size>0.03 0.03 0.1</size>
+            <size>0.06 0.06 0.1</size>
           </box>
         </geometry>
         <material>
@@ -74,14 +74,14 @@
       <collision name="blue_collision">
         <geometry>
           <box>
-            <size>0.03 0.03 0.1</size>
+            <size>0.06 0.06 0.1</size>
           </box>
         </geometry>
       </collision>
       <visual name="blue_visual">
         <geometry>
           <box>
-            <size>0.03 0.03 0.1</size>
+            <size>0.06 0.06 0.1</size>
           </box>
         </geometry>
         <material>
