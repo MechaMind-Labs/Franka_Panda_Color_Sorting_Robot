@@ -13,6 +13,85 @@
       <background>0.7 0.7 0.7 1</background>
       <shadows>true</shadows>
     </scene>
+
+  <!-- ================= RED BOX ================= -->
+  <model name="red_box">
+    <static>false</static>
+    <link name="red_link">
+      <pose>0.6 0.6 0.70 0 0 0</pose>
+      <collision name="red_collision">
+        <geometry>
+          <box>
+            <size>0.03 0.03 0.1</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="red_visual">
+        <geometry>
+          <box>
+            <size>0.03 0.03 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>   <!-- Red -->
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+
+  <!-- ================= GREEN BOX ================= -->
+  <model name="green_box">
+    <static>false</static>
+    <link name="green_link">
+      <pose>0.8 0.6 0.70 0 0 0</pose>
+      <collision name="green_collision">
+        <geometry>
+          <box>
+            <size>0.03 0.03 0.1</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="green_visual">
+        <geometry>
+          <box>
+            <size>0.03 0.03 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 1 0 1</ambient>   <!-- Green -->
+          <diffuse>0 1 0 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+
+  <!-- ================= BLUE BOX ================= -->
+  <model name="blue_box">
+    <static>false</static>
+    <link name="blue_link">
+      <pose>0.4 0.6 0.70 0 0 0</pose>
+      <collision name="blue_collision">
+        <geometry>
+          <box>
+            <size>0.03 0.03 0.1</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="blue_visual">
+        <geometry>
+          <box>
+            <size>0.03 0.03 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 1 1</ambient>   <!-- Blue -->
+          <diffuse>0 0 1 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+
     <model name='CoffeeTable_1'>
       <static>true</static>
       <model name='aws_robomaker_residential_CoffeeTable_01'>

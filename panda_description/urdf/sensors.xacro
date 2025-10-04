@@ -24,7 +24,7 @@
     </link>
     
     <joint name="camera_joint" type="fixed">
-        <origin xyz="0.5 0 1.5" rpy="0.0 0.0 0.0"/>
+        <origin xyz="0.6 0 1.0" rpy="0.0 0.0 0.0"/>
         <parent link="panda_link0"/>
         <child link="camera_link"/>
     </joint>
@@ -47,10 +47,10 @@
             <gz_frame_id>camera_link_optical</gz_frame_id>
             <camera name="intel_realsense_r200">
                 <camera_info_topic>camera/camera_info</camera_info_topic>
-                <horizontal_fov>1.3962634</horizontal_fov>
+                <horizontal_fov>1.0</horizontal_fov>
                 <image>
                     <width>640</width>
-                    <height>480</height>
+                    <height>320</height>
                     <format>R8G8B8</format>
                 </image>
                 <clip>
