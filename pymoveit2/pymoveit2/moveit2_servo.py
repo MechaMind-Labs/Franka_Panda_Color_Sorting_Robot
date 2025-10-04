@@ -24,6 +24,7 @@ class MoveIt2Servo:
         self,
         node: Node,
         frame_id: str,
+        namespace: str = "",
         linear_speed: float = 1.0,
         angular_speed: float = 1.0,
         enable_at_init: bool = True,
@@ -32,6 +33,7 @@ class MoveIt2Servo:
         """
         Construct an instance of `MoveIt2Servo` interface.
           - `node` - ROS 2 node that this interface is attached to
+          - `namespace` - Namespace for the node
           - `frame_id` - Reference frame in which to publish command messages
           - `linear_speed` - Factor that can be used to scale all input linear twist commands
           - `angular_speed` - Factor that can be used to scale all input angular twist commands
@@ -41,6 +43,8 @@ class MoveIt2Servo:
         """
 
         self._node = node
+
+        self.namespace = namespace
 
         # Create publisher
         self.__twist_pub = self._node.create_publisher(
@@ -57,12 +61,12 @@ class MoveIt2Servo:
         # Create service clients
         self.__start_service = self._node.create_client(
             srv_type=Trigger,
-            srv_name="/servo_node/start_servo",
+            srv_name=self.namespace + "/servo_node/start_servo",
             callback_group=callback_group,
         )
         self.__stop_service = self._node.create_client(
             srv_type=Trigger,
-            srv_name="/servo_node/stop_servo",
+            srv_name=self.namespace + "/servo_node/stop_servo",
             callback_group=callback_group,
         )
         self.__trigger_req = Trigger.Request()
@@ -79,8 +83,8 @@ class MoveIt2Servo:
         self.__twist_msg.twist.angular.z = angular_speed
 
         # Enable servo immediately, if desired
-        # if enable_at_init:
-        #     self.enable()
+        if enable_at_init:
+            self.enable()
 
     def __del__(self):
         """
@@ -115,18 +119,18 @@ class MoveIt2Servo:
         Input is scaled by `linear_speed` and `angular_speed`, respectively.
         """
 
-        # if not self.is_enabled:
-        #     self._node.get_logger().warn(
-        #         "Command failed because MoveIt Servo is not yet enabled."
-        #     )
-        #     if enable_if_disabled:
-        #         self._node.get_logger().warn(
-        #             f"Calling '{self.__start_service.srv_name}' service to enable MoveIt Servo..."
-        #         )
-        #         if not self.enable():
-        #             return
-        #     else:
-        #         return
+        if not self.is_enabled:
+            self._node.get_logger().warn(
+                "Command failed because MoveIt Servo is not yet enabled."
+            )
+            if enable_if_disabled:
+                self._node.get_logger().warn(
+                    f"Calling '{self.__start_service.srv_name}' service to enable MoveIt Servo..."
+                )
+                if not self.enable():
+                    return
+            else:
+                return
 
         twist_msg = deepcopy(self.__twist_msg)
         twist_msg.header.stamp = self._node.get_clock().now().to_msg()
@@ -136,7 +140,6 @@ class MoveIt2Servo:
         twist_msg.twist.angular.x *= angular[0]
         twist_msg.twist.angular.y *= angular[1]
         twist_msg.twist.angular.z *= angular[2]
-        print(twist_msg)
         self.__twist_pub.publish(twist_msg)
 
     def enable(

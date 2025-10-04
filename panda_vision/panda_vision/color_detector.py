@@ -50,8 +50,8 @@ class ColorDetector(Node):
         # Define color ranges (HSV)
         color_ranges = {
             "R": [(0, 120, 70), (10, 255, 255)],
-            "G": [(36, 50, 70), (89, 255, 255)],
-            "B": [(90, 50, 70), (128, 255, 255)]
+            "G": [(55, 200, 200), (60, 255, 255)],
+            "B": [(90, 200, 200), (128, 255, 255)]
         }
 
         for color_id, (lower, upper) in color_ranges.items():

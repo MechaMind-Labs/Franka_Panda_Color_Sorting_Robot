@@ -1,31 +1,34 @@
 from typing import List
 
-# Move group name for the Panda arm
 MOVE_GROUP_ARM: str = "arm"
-
-# Move group name for the Panda gripper
 MOVE_GROUP_GRIPPER: str = "gripper"
 
-def joint_names() -> List[str]:
-    return ["panda_joint1",
-            "panda_joint2",
-            "panda_joint3",
-            "panda_joint4",
-            "panda_joint5",
-            "panda_joint6",
-            "panda_joint7",]
-
-def gripper_joint_names() -> List[str]:
-    return ["panda_finger_joint1",
-            "panda_finger_joint2",]
-
-def base_link_name() -> str:
-    return "panda_link0"
+OPEN_GRIPPER_JOINT_POSITIONS: List[float] = [0.04, 0.04]
+CLOSED_GRIPPER_JOINT_POSITIONS: List[float] = [0.0, 0.0]
 
 
-def end_effector_name() -> str:
-    return "panda_hand"
+def joint_names(prefix: str = "panda_") -> List[str]:
+    return [
+        prefix + "joint1",
+        prefix + "joint2",
+        prefix + "joint3",
+        prefix + "joint4",
+        prefix + "joint5",
+        prefix + "joint6",
+        prefix + "joint7",
+    ]
 
-# def tip_link_name() -> str:
-#     return "panda_link7"
 
+def base_link_name(prefix: str = "panda_") -> str:
+    return prefix + "link0"
+
+
+def end_effector_name(prefix: str = "panda_") -> str:
+    return prefix + "hand"
+
+
+def gripper_joint_names(prefix: str = "panda_") -> List[str]:
+    return [
+        prefix + "finger_joint1",
+        prefix + "finger_joint2",
+    ]

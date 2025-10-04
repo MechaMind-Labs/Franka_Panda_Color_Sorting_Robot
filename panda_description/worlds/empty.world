@@ -92,6 +92,14 @@
     </link>
   </model>
 
+	<model name='Trash_01_001'>
+        <static>true</static>    
+        <include>
+            <uri>model://aws_robomaker_residential_Trash_01</uri>
+        </include>
+        <pose frame=''>0.6 -0.6 0.0 0 0 0</pose>
+	</model>
+
     <model name='CoffeeTable_1'>
       <static>true</static>
       <model name='aws_robomaker_residential_CoffeeTable_01'>
