@@ -112,8 +112,8 @@ It includes:
 
 2. Add configuration files:
 
-   * `panda_controller/config/controllers.yaml` (joint, arm, gripper)
-   * `panda_controller/launch/controllers.launch.py`
+   * `panda_controller/config/panda_controllers.yaml` (joint, arm, gripper)
+   * `panda_controller/launch/controller.launch.py`
 
 3. Implement a simple test controller node:
    `slider_controller.py` — controls Panda arm joints manually.
