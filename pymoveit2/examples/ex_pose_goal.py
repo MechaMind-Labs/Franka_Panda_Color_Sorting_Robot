@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+zz#!/usr/bin/env python3
 """
 Example of moving to a pose goal.
 - ros2 run pymoveit2 ex_pose_goal.py --ros-args -p position:="[0.25, 0.0, 1.0]" -p quat_xyzw:="[0.0, 0.0, 0.0, 1.0]" -p cartesian:=False

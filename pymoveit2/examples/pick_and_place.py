@@ -112,7 +112,7 @@ class PickAndPlace(Node):
                 self.gripper.wait_until_executed()
 
                 # 4. Move down to approach object
-                approach_position = [pick_position[0], pick_position[1], pick_position[2] - 0.32]
+                approach_position = [pick_position[0], pick_position[1], pick_position[2] - 0.31]
                 self.moveit2.move_to_pose(position=approach_position, quat_xyzw=quat_xyzw)
                 self.moveit2.wait_until_executed()
 
