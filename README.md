@@ -140,13 +140,17 @@ It includes:
    * End-effector definitions
    * Controller connections
 
-3. Export configuration as a package:
+3. Create panda_moveit cmake pkg with config folder in it:
 
    ```bash
-   panda_moveit_config in panda_moveit pkg config
+   ros2 pkg create --build-type ament_python panda_moveit
+   cd panda_moveit
+   mkdir config
    ```
 
-4. Test planning:
+    *then paste relevant panda_moveit_configurations, from moveit_setup_assistant in config folder of panda_moveit pkg*
+   
+5. Test planning:
 
    ```bash
    ros2 launch panda_moveit moveit.launch.py
