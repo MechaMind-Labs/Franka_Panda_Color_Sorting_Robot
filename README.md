@@ -20,6 +20,7 @@ cd ~/panda_ws
 Use `rosdep` to install all required ROS dependencies:
 
 ```bash
+cd ~/panda_ws
 sudo apt install python3-rosdep -y
 sudo rosdep init
 rosdep update
