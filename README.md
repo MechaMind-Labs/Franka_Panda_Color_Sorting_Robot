@@ -121,7 +121,7 @@ It includes:
 4. Test:
 
    ```bash
-   ros2 launch panda_controller controllers.launch.py
+   ros2 launch panda_controller controller.launch.py
    ```
 
 ---
