@@ -12,7 +12,6 @@ This project allows the Panda robot to detect colored objects (Red, Green, or Bl
 ```bash
 cd ~/panda_ws/src
 git clone https://github.com/MechaMind-Labs/Franka_Panda_Color_Sorting_Robot.git
-cd ~/panda_ws
 ```
 
 ### **2️⃣ Install Dependencies**
