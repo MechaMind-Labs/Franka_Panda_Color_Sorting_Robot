@@ -14,7 +14,7 @@
   <exec_depend>panda_description</exec_depend>
   <exec_depend>panda_moveit</exec_depend>
   <exec_depend>panda_vision</exec_depend>
-  <exec_depend>panda_script</exec_depend>
+  <exec_depend>pymoveit2</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
