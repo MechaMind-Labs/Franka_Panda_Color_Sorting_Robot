@@ -53,12 +53,12 @@ def generate_launch_description():
 
     # ------------------- MoveIt Color Picker Node -------------------
     color_picker_node = Node(
-        package="panda_script",
-        executable="panda_color_picker",
-        name="panda_color_picker",
+        package="pymoveit2",
+        executable="pick_and_place.py",
+        name="pick_and_place",
         output="screen",
         parameters=[
-            {"pick_order": "RGB"}  # You can change the order here, (RGB, BGR, GRB)
+            {"target_color": "B"}  # {"target_color": "R"}, {"target_color": "G"}
         ]
     )
 
