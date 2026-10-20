@@ -15,7 +15,7 @@ https://github.com/user-attachments/assets/0813eb4e-310d-4b68-b538-3c8a857079a4
 >
 > **Watch:** [full build masterclass (2 h 45 min)](https://youtu.be/0N3B8FG0T1Y) · [demo](https://youtu.be/EM88ld4cCNk) · [demo 2](https://youtu.be/V-1uXPxmQys) · [simulation short](https://www.youtube.com/shorts/HbTO98TFiUU)
 >
-> **Related:** [SCARA conveyor cell](https://github.com/Curious-Utkarsh/ROS2_SCARA_WS) — the same vision-guided pick pipeline on real hardware · [Dual-Panda tic-tac-toe](https://github.com/MechaMind-Labs/ROS2_Dual_Franka_Panda_TicTacToe_AI_Vision) — two Pandas playing a game with MoveIt 2 and OpenCV · [UR5 MediaPipe pick-and-place](https://github.com/MechaMind-Labs/UR5_PICK_AND_PLACE_MEDIAPIPE_ROS2) · [3-DOF arm digital twin](https://github.com/MechaMind-Labs/ROS2_3DOF_Robotic_Arm_Digital_Twin)
+> **Related:** [SCARA conveyor cell](https://github.com/Curious-Utkarsh/scara-pick-and-place) — the same vision-guided pick pipeline on real hardware · [Dual-Panda tic-tac-toe](https://github.com/MechaMind-Labs/dual-franka-tic-tac-toe) — two Pandas playing a game with MoveIt 2 and OpenCV · [UR5 MediaPipe pick-and-place](https://github.com/MechaMind-Labs/ur5-gesture-pick-and-place) · [3-DOF arm digital twin](https://github.com/MechaMind-Labs/3dof-arm-digital-twin)
 
 ---
 
@@ -388,7 +388,7 @@ cd ~/panda_ws
 
 ```bash
 cd ~/panda_ws/src
-git clone https://github.com/MechaMind-Labs/Franka_Panda_Color_Sorting_Robot.git .
+git clone https://github.com/MechaMind-Labs/franka-color-sorting-robot.git .
 ```
 
 ### 4.3 Install Package Dependencies
@@ -660,7 +660,7 @@ If you encounter issues not covered here:
    ```
 
 2. **Search existing issues:**
-   [GitHub Issues](https://github.com/MechaMind-Labs/Franka_Panda_Color_Sorting_Robot/issues)
+   [GitHub Issues](https://github.com/MechaMind-Labs/franka-color-sorting-robot/issues)
 
 3. **Create a new issue** with:
    - System info: `uname -a`, `ros2 --version`
