@@ -8,6 +8,13 @@ A **ROS 2-based intelligent color sorting system** powered by the **Franka Emika
 
 https://github.com/user-attachments/assets/0813eb4e-310d-4b68-b538-3c8a857079a4
 
+
+> **At a glance:** a Franka Emika Panda (7-DOF) in Gazebo sorts red, green and blue blocks into bins. OpenCV HSV segmentation finds each block, tf2 moves its position into the robot frame, MoveIt 2 plans the pick through pymoveit2, and ros2_control executes arm and gripper trajectories. A Docker image runs it on ROS 2 Humble and Jazzy.
+>
+> **Watch:** [full build masterclass (2 h 45 min)](https://youtu.be/0N3B8FG0T1Y) · [demo](https://youtu.be/EM88ld4cCNk) · [demo 2](https://youtu.be/V-1uXPxmQys)
+>
+> **Related:** [SCARA conveyor cell](https://github.com/Curious-Utkarsh/ROS2_SCARA_WS) — the same vision-guided pick pipeline on real hardware · [UR5 MediaPipe pick-and-place](https://github.com/MechaMind-Labs/UR5_PICK_AND_PLACE_MEDIAPIPE_ROS2) · [3-DOF arm digital twin](https://github.com/MechaMind-Labs/ROS2_3DOF_Robotic_Arm_Digital_Twin)
+
 ---
 
 ## ✨ Features
@@ -747,11 +754,13 @@ BLUE_BIN = [0.5, 0.3, 0.2]
 
 ## Tune Motion Planning
 
-Edit `panda_moveit/config/moveit.yaml`:
+Edit `panda_moveit/config/planning_python_api.yaml`:
 
 ```yaml
-planning_time: 5.0  # Increase for complex scenes
-max_velocity_scaling: 0.5  # Slower = safer
+plan_request_params:
+  planning_attempts: 1               # increase for cluttered scenes
+  max_velocity_scaling_factor: 1.0   # lower = slower, safer
+  max_acceleration_scaling_factor: 1.0
 ```
 
 ---
@@ -816,6 +825,8 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - All contributors and supporters
 
 **Inspired by:** Real-world industrial pick-and-place automation systems
+
+**Third-party code:** [`pymoveit2`](https://github.com/AndrejOrsula/pymoveit2) by Andrej Orsula (BSD-3-Clause) is vendored in `pymoveit2/` with its own licence.
 
 ---
 
