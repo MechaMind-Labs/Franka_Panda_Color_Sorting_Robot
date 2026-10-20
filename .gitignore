@@ -9,3 +9,7 @@ devel/
 # VS Code
 .vscode/
 .vscode
+
+# Python
+__pycache__/
+*.pyc
