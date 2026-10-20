@@ -53,7 +53,7 @@ https://github.com/user-attachments/assets/0813eb4e-310d-4b68-b538-3c8a857079a4
 
 # 🐳 Quick Start with Docker (Recommended)
 
-Get up and running in minutes with our pre-built Docker image! This method eliminates dependency conflicts and provides a consistent, production-ready environment.
+Get up and running in minutes with our pre-built Docker image! This method eliminates dependency conflicts and provides a consistent environment.
 
 ## Prerequisites
 
