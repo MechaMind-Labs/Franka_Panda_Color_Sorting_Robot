@@ -13,7 +13,7 @@ https://github.com/user-attachments/assets/0813eb4e-310d-4b68-b538-3c8a857079a4
 >
 > **Watch:** [full build masterclass (2 h 45 min)](https://youtu.be/0N3B8FG0T1Y) · [demo](https://youtu.be/EM88ld4cCNk) · [demo 2](https://youtu.be/V-1uXPxmQys) · [simulation short](https://www.youtube.com/shorts/HbTO98TFiUU)
 >
-> **Related:** [SCARA conveyor cell](https://github.com/Curious-Utkarsh/ROS2_SCARA_WS) — the same vision-guided pick pipeline on real hardware · [UR5 MediaPipe pick-and-place](https://github.com/MechaMind-Labs/UR5_PICK_AND_PLACE_MEDIAPIPE_ROS2) · [3-DOF arm digital twin](https://github.com/MechaMind-Labs/ROS2_3DOF_Robotic_Arm_Digital_Twin)
+> **Related:** [SCARA conveyor cell](https://github.com/Curious-Utkarsh/ROS2_SCARA_WS) — the same vision-guided pick pipeline on real hardware · [Dual-Panda tic-tac-toe](https://github.com/MechaMind-Labs/ROS2_Dual_Franka_Panda_TicTacToe_AI_Vision) — two Pandas playing a game with MoveIt 2 and OpenCV · [UR5 MediaPipe pick-and-place](https://github.com/MechaMind-Labs/UR5_PICK_AND_PLACE_MEDIAPIPE_ROS2) · [3-DOF arm digital twin](https://github.com/MechaMind-Labs/ROS2_3DOF_Robotic_Arm_Digital_Twin)
 
 ---
 
