@@ -15,6 +15,8 @@ https://github.com/user-attachments/assets/0813eb4e-310d-4b68-b538-3c8a857079a4
 >
 > **Watch:** [full build masterclass (2 h 45 min)](https://youtu.be/0N3B8FG0T1Y) · [demo](https://youtu.be/EM88ld4cCNk) · [demo 2](https://youtu.be/V-1uXPxmQys) · [simulation short](https://www.youtube.com/shorts/HbTO98TFiUU)
 >
+> **Playlists:** [Robotics Projects](https://www.youtube.com/playlist?list=PLdMuvhY3uTKstk7-rEB08oEmaAYHoISt5) · [Workshops and Live Labs](https://www.youtube.com/playlist?list=PLdMuvhY3uTKtMOVVnfKRV4qswTEHeXTy2)
+>
 > **Related:** [SCARA conveyor cell](https://github.com/Curious-Utkarsh/scara-pick-and-place) — the same vision-guided pick pipeline on real hardware · [Dual-Panda tic-tac-toe](https://github.com/MechaMind-Labs/dual-franka-tic-tac-toe) — two Pandas playing a game with MoveIt 2 and OpenCV · [UR5 MediaPipe pick-and-place](https://github.com/MechaMind-Labs/ur5-gesture-pick-and-place) · [3-DOF arm digital twin](https://github.com/MechaMind-Labs/3dof-arm-digital-twin)
 
 ---
