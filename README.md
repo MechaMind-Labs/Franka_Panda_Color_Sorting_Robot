@@ -1,6 +1,6 @@
 # 🤖 Franka Panda Color Sorting Robot
 
-A **ROS 2-based intelligent color sorting system** powered by the **Franka Emika Panda robotic arm**. This project seamlessly integrates **OpenCV computer vision**, **MoveIt 2 motion planning**, and **Gazebo simulation** to create an autonomous pick-and-place system that detects and sorts colored objects with precision.
+A **ROS 2-based intelligent color sorting system** powered by the **Franka Emika Panda robotic arm**. This project integrates **OpenCV computer vision**, **MoveIt 2 motion planning**, and **Gazebo simulation** to create an autonomous pick-and-place system that detects and sorts colored objects with precision.
 
 ---
 
@@ -164,7 +164,7 @@ docker run -it --rm \
 
 **Command Breakdown:**
 - `--name franka_panda_color_sorter` → Assign a friendly container name
-- `--network host` → Share host network for seamless ROS 2 communication
+- `--network host` → Share host network for ROS 2 communication
 - `-e DISPLAY=$DISPLAY` → Pass display variable for GUI applications
 - `-v /tmp/.X11-unix:/tmp/.X11-unix:rw` → Mount X11 socket for graphics
 - `curiousutkarsh/franka_panda_color_sorter:humble` → Pre-built Docker image
